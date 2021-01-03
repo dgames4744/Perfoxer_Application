@@ -1,0 +1,30 @@
+@media (max-width: 767px) {
+    .divDisplayNone{
+        display: none !important;
+    }
+}
+@media (max-width: 575px) {
+    .divDisplayNone1{
+        display: none !important;
+    }
+}
+footer{
+    background-color: white;
+    border-top: 0.1px solid green;
+    border-bottom: 0.1px solid green;
+    padding: 1px;
+    position: fixed;
+    bottom: 0px;
+    width:100%;
+    z-index: 102;  
+    text-align: center;
+}
+.containerMenu > .logout{
+    display: flex;
+    justify-content: flex-end;
+}
+
+body .ui-toolbar{
+    background-color: white !important;
+    //padding-bottom: 0 !important;
+}

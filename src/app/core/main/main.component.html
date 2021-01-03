@@ -1,0 +1,257 @@
+<div class="p-grid sample-layout">
+    <div class="p-col-12">
+        <p-toolbar>
+            <div class="p-grid">
+                <div class="p-col-12 p-sm-6">
+                    <div class="ui-toolbar-group-left">
+                        <img src="assets/logo.png" alt="" width="150px">
+                    </div>
+                </div>
+                <div class="p-col-12 p-sm-6">
+                    <div class="ui-toolbar-group-right" style="margin: 1.5em;">
+                        <a href="#" style="color: grey;margin-right: 0.5em;">Suscribe</a>
+                        <a href="#" style="color: grey;margin-right: 0.5em;">About Us</a>
+                        <a href="#" style="color: grey;">More +</a>
+                        <!-- <button pButton label="Logout" icon="pi pi-power-off" style="margin-left:.25em"></button> -->
+                    </div>
+                </div>
+            </div>
+        </p-toolbar>
+    </div>
+    <div class="p-col-12">
+        <div class="p-grid">
+            <div class="p-col-12 p-sm-3">
+                <div style="background-color: #f4f4f4;height: 100%;">
+                    <p-panelMenu [model]="items2"></p-panelMenu>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <p-carousel [value]="cars" orientation="vertical" class="divDisplayNone"
+                        [style]="{'margin-top':'2em'}" verticalViewPortHeight="355px" [numVisible]="1" [numScroll]="1" [autoplayInterval]="10000">
+                        <ng-template let-car pTemplate="item">
+                            <div class="car-details">
+                                <div class="p-grid p-nogutter" style="margin-bottom: 0.2em;">
+                                    <div class="p-col-12" style="display: flex;justify-content: center;">
+                                        <img
+                                            src="https://img.discogs.com/OphDnf6GhtRk6XoALz4GIcx7sOI=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1963612-1545430004-3264.jpeg.jpg" />
+                                    </div>
+                                    <div class="p-col-12 car-data">
+                                        <div class="car-title" style="display: flex;justify-content: center;">
+                                            {{car.brand}}</div>
+
+                                        <div class="car-buttons" style="display: flex;justify-content: center;">
+                                            <button pButton type="button" class="ui-button-secondary"
+                                                icon="pi pi-search"></button>
+                                            <button pButton type="button" class="ui-button-secondary"
+                                                icon="pi pi-star"></button>
+                                            <button pButton type="button" class="ui-button-secondary"
+                                                icon="pi pi-cog"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-col-12 p-sm-9 p-md-6">
+                <div class="p-col-12">
+                    <p-carousel [value]="cars" styleClass="custom-carousel" [numVisible]="1" [numScroll]="1"
+                        [circular]="true" [autoplayInterval]="10000" [responsiveOptions]="responsiveOptions">
+                        <ng-template let-car pTemplate="item">
+                            <div class="car-details">
+                                <div class="p-grid p-nogutter">
+                                    <div class="p-col-12" style="display: flex;justify-content: center;">
+                                        <img style="border-radius: 0.2em;" src="assets/as.png" />
+                                    </div>
+                                    <div class="p-col-12 car-data" style="margin-bottom: 0.3em;">
+                                        <div class="car-title" style="display: flex;justify-content: center;">
+                                            {{car.brand}}</div>
+                                        <div class="car-buttons" style="display: flex;justify-content: center;">
+                                            <button pButton type="button" class="ui-button-secondary"
+                                                icon="pi pi-search"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+                </div>
+                <div class="p-col-12">
+                    <router-outlet></router-outlet>
+                    <app-music></app-music>
+                </div>
+                <hr style="border: 3px double #c8c8c8;">
+                <div class="p-col-12">
+                    <div class="p-col-12">
+                        <div class="p-grid">
+                            <div class="p-col-12" style="background-color: chocolate;">1</div>
+                            <div class="p-col" style="background-color: crimson;">2</div>
+                            <div class="p-col" style="background-color: darkgoldenrod;">3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-col-3 divDisplayNone">
+                <div style="background-color: #f4f4f4;height: 100%;">
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <p-carousel [value]="cars" orientation="vertical" class="divDisplayNone"
+                        [style]="{'margin-top':'2em'}" verticalViewPortHeight="355px" [numVisible]="1" [numScroll]="1">
+                        <ng-template let-car pTemplate="item">
+                            <div class="car-details">
+                                <div class="p-grid p-nogutter" style="margin-bottom: 0.2em;">
+                                    <div class="p-col-12" style="display: flex;justify-content: center;">
+                                        <img
+                                            src="https://img.discogs.com/OphDnf6GhtRk6XoALz4GIcx7sOI=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1963612-1545430004-3264.jpeg.jpg" />
+                                    </div>
+                                    <div class="p-col-12 car-data">
+                                        <div class="car-title" style="display: flex;justify-content: center;">
+                                            {{car.brand}}</div>
+
+                                        <div class="car-buttons" style="display: flex;justify-content: center;">
+                                            <button pButton type="button" class="ui-button-secondary"
+                                                icon="pi pi-search"></button>
+                                            <button pButton type="button" class="ui-button-secondary"
+                                                icon="pi pi-star"></button>
+                                            <button pButton type="button" class="ui-button-secondary"
+                                                icon="pi pi-cog"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 divDisplayNone1">
+                        <div class="p-grid p-justify-center">
+                            <div class="p-col-12">
+                                <p-card header="Simple Card">
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+                                        consequuntur error repudiandae numquam deserunt</div>
+                                </p-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span> &copy; Copyright 2020</span>
+    </footer>
+</div>

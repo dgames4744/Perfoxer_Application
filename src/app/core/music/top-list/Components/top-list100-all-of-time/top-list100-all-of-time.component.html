@@ -1,0 +1,77 @@
+<p-dataView #dv [value]="cars" [paginator]="true" [rows]="4" paginatorPosition="both" filterBy="brand"
+    [showCurrentPageReport]="true" [sortOrder]="sortOrder"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[4,10,25]"
+    [style]="{'min-width':'15em'}">
+    <p-header>
+        <div class="ui-helper-clearfix">
+            <div class="ui-g">
+                <div class="ui-g-6 ui-md-8 filter-container">
+                    <div style="position:relative">
+                        <input type="search" pInputText placeholder="Search by brand"
+                            (input)="dv.filter($event.target.value)">
+                    </div>
+                </div>
+                <div class="ui-g-6 ui-md-4" style="text-align:right">
+                    <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+                </div>
+            </div>
+        </div>
+    </p-header>
+    <ng-template let-car pTemplate="listItem">
+        <div class="ui-g-12">
+            <!-- <div class="ui-g">
+                <div class="ui-g-3">Vin: <b>{{car.vin}}</b></div>
+                <div class="ui-g-3">Year: <b>{{car.year}}</b></div>
+                <div class="ui-g-3">Brand: <b>{{car.brand}}</b></div>
+                <div class="ui-g-3">Color: <b>{{car.color}}</b></div>
+            </div>
+            <button pButton type="button" icon="pi pi-search" (click)="selectCar($event, car)"></button> -->
+            <p-card>
+                <div class="ui-g">
+                    <div class="ui-g-6 ui-md-9">
+                        <div class="p-col-12" style="background-color: chartreuse;margin: 5px 0px;">
+                            <div class="box ui-card-content">{{car.singer}}</div>
+                        </div>
+                        <div class="p-col-12" style="background-color: chocolate;margin: 5px 0px;">
+                            <div class="box ui-card-content">{{car.song}}</div>
+                        </div>
+                        <div class="p-col-12"  style="background-color: cyan;margin: 5px 0px;">
+                            <div class="box ui-card-content">{{car.date}}</div>
+                        </div>
+                        <!-- <p-rating [ngModel]="5" readonly="true" stars="10" [cancel]="false"></p-rating> -->
+                    </div>
+                    <div class="ui-g-6 ui-md-3">
+                        <img src="{{car.image}}" alt="" width="100%">
+                    </div>
+                </div>
+            </p-card>
+        </div>
+    </ng-template>
+    <ng-template let-car pTemplate="gridItem">
+        <div style="padding:.5em" class="ui-g-12 ui-md-3">
+            <p-panel [header]="car.vin" [style]="{'text-align':'center'}">
+                <div class="car-detail">{{car.year}} - {{car.color}}</div>
+                <hr class="ui-widget-content" style="border-top:0">
+                <button pButton type="button" icon="pi pi-search" (click)="selectCar($event, car)"
+                    style="margin-top:0"></button>
+            </p-panel>
+        </div>
+    </ng-template>
+</p-dataView>
+
+<p-dialog header="Car Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true"
+    [style]="{width: '225px'}" (onAfterHide)="onDialogHide()">
+    <div class="ui-g" *ngIf="selectedCar">
+        <div class="ui-g-4">Vin: </div>
+        <div class="ui-g-8">{{selectedCar.vin}}</div>
+
+        <div class="ui-g-4">Brand: </div>
+        <div class="ui-g-8">{{selectedCar.brand}}</div>
+
+        <div class="ui-g-4">Year: </div>
+        <div class="ui-g-8">{{selectedCar.year}}</div>
+
+        <div class="ui-g-4">Color: </div>
+        <div class="ui-g-8">{{selectedCar.color}}</div>
+    </div>
+</p-dialog>
